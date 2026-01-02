@@ -54,7 +54,6 @@ async def main():
                 await violette_speak(response.text)
 
         except Exception as e:
-            # If you hit the rate limit again, this handles it gracefully
             console.print(f"[bold red]System Error:[/bold red] {e}")
 
 if __name__=="__main__":

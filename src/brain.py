@@ -29,7 +29,7 @@ CORE DIRECTIVES:
 Current Date and Time: {current_time}
 """
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL_NAME ="gemini-2.5-flash"
+MODEL_NAME ="gemini-2.5-flash-lite"
 
 #Current time 
 current_time = datetime.now().strftime("%A, %B %d, %Y at %I%M %p")

@@ -1,6 +1,6 @@
 import asyncio
 from rich.console import Console
-from brain import start_chat
+from brain import start_chat, send_message_to_violette
 from voice import violette_speak
 
 console = Console()
@@ -45,7 +45,7 @@ async def main():
         # --- CHAT LOGIC ---
         try:
             with console.status("[bold magenta]Thinking...[/bold magenta]", spinner="dots"):
-                response = chat.send_message(user_input)
+                response = send_message_to_violette(chat,user_input)
                 
             console.print(f"[bold magenta]Violette[/bold magenta]: {response.text}\n")
 
